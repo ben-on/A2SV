@@ -1,3 +1,7 @@
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        return sorted(sum(matrix,[]))[k-1]
+        
+        arr=[]
+        for i in matrix:
+            arr=[*arr,*i]
+        return sorted(arr)[k-1]
